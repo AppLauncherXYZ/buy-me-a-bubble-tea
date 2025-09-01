@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Buy Me a Bubble Tea - v0 Template
 
-## Getting Started
+A beautiful, mobile-first template for creator support pages inspired by "Buy Me a Coffee" but designed for Thai creators and their bubble tea addiction! 🧋
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **4 Beautiful Themes**: Bubble Tea, Pad Thai, Mango Sticky Rice, Anime Boba
+- **Mobile-First Design**: Optimized for mobile with responsive layout
+- **PromptPay Integration**: Ready for Thai payment system
+- **Interactive Components**: QR modals, message forms, sticker support
+- **Dark Mode Only**: Clean, modern aesthetic
+- **TypeScript**: Fully typed for better developer experience
+
+## 🚀 Quick Start
+
+The template comes with demo data ready to edit. Simply modify the `demoProfile` object in `src/app/page.tsx`:
+
+```typescript
+const demoProfile = {
+  username: "yourusername",           // Your username
+  name: "Your Name",                  // Display name
+  tagline: "Your awesome tagline!",   // What supporters see
+  avatarUrl: "/themes/avatar-demo.svg", // Your avatar image
+  theme: "bubbleTea",                 // Choose: bubbleTea, padThai, mangoStickyRice, animeBoba
+  tiers: [
+    { label: "Buy 1 🍹", amountTHB: 50, emoji: "🥤" },
+    { label: "Buy 3 🍹", amountTHB: 150, emoji: "🧋" },
+    { label: "Buy 5 🍹", amountTHB: 250, emoji: "💖" },
+  ],
+  promptpayQRUrl: "/themes/promptpay-qr-placeholder.svg", // Your QR code
+};
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Changing Themes
+Available themes: `bubbleTea`, `padThai`, `mangoStickyRice`, `animeBoba`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Adding Donation Tiers
+Modify the `tiers` array to add/remove/change donation amounts and labels.
 
-## Learn More
+### Custom Assets
+Replace the placeholder files in `/public/themes/`:
+- `avatar-demo.svg` - Your profile picture
+- `promptpay-qr-placeholder.svg` - Your PromptPay QR code
 
-To learn more about Next.js, take a look at the following resources:
+### Adding Stickers
+Add new sticker SVGs to `/public/stickers/` and update the `STICKERS` array in `StickerPicker.tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **CreatorHeader**: Avatar, name, and tagline
+- **DonationTiers**: Interactive donation buttons
+- **QRModal**: Displays payment QR code
+- **MessageForm**: Support messages with stickers
+- **SupporterFeed**: Recent supporter activity
 
-## Deploy on Vercel
+## 🎯 For v0 Users
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This template is designed to be easily editable in v0:
+1. All text, images, and settings are in one place (`src/app/page.tsx`)
+2. Components are modular and reusable
+3. Fully responsive and accessible
+4. Ready for backend integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Development
+
+```bash
+npm install
+npm run dev
+```
+
+## 📄 License
+
+MIT License - feel free to use and modify for your projects!

@@ -1,0 +1,12 @@
+/* src/styles/theme.css */
+:root {
+  --bg: #0b0b12;
+  --fg: #f7f7ff;
+  --accent: #b58eff;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
