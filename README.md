@@ -1,4 +1,4 @@
-# Buy Me a Bubble Tea - v0 Template
+# Buy Me a Bubble Tea
 
 A beautiful, mobile-first template for creator support pages inspired by "Buy Me a Coffee" but designed for Thai creators and their bubble tea addiction! 🧋
 
