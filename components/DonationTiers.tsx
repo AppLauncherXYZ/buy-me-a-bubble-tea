@@ -21,23 +21,30 @@ export function DonationTiers({ tiers, onSelectTier, qrUrl }: DonationTiersProps
 
   return (
     <div className="space-y-3">
-      {tiers.map((tier) => (
-        <Button
+      {tiers.map((tier, index) => (
+        <div
           key={tier.amountTHB}
-          variant="outline"
-          size="lg"
-          className="w-full justify-between"
-          onClick={() => handleTierClick(tier)}
-          aria-label={`Buy ${tier.label} for ${tier.amountTHB} THB`}
+          className="animate-in slide-in-from-bottom-4 duration-500"
+          style={{ animationDelay: `${index * 100}ms` }}
         >
-          <span className="flex items-center gap-2">
-            <span className="text-2xl">{tier.emoji}</span>
-            {tier.label}
-          </span>
-          <span className="text-[var(--accent)] font-semibold">
-            ฿{tier.amountTHB}
-          </span>
-        </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-full justify-between glass hover:scale-105 transition-all duration-200 smooth-transform group"
+            onClick={() => handleTierClick(tier)}
+            aria-label={`Buy ${tier.label} for ${tier.amountTHB} THB`}
+          >
+            <span className="flex items-center gap-2">
+              <span className="text-2xl group-hover:scale-110 transition-transform duration-200">
+                {tier.emoji}
+              </span>
+              <span className="font-medium">{tier.label}</span>
+            </span>
+            <span className="text-[var(--accent)] font-bold text-lg">
+              ฿{tier.amountTHB}
+            </span>
+          </Button>
+        </div>
       ))}
     </div>
   );

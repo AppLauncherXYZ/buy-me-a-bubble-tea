@@ -7,9 +7,9 @@ interface CardProps {
 }
 
 export function Card({ children, className = '', variant = 'default' }: CardProps) {
-  const baseClasses = 'rounded-lg border';
+  const baseClasses = 'rounded-xl border transition-all duration-200';
   const variantClasses = {
-    default: 'bg-gray-800 border-gray-700 p-4',
+    default: 'glass-dark border-gray-600 p-6 hover:scale-[1.02] smooth-transform',
     transparent: 'bg-transparent border-transparent p-0'
   };
 

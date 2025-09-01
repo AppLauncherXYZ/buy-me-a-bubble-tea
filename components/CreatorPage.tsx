@@ -48,23 +48,29 @@ export function CreatorPage({ profile }: CreatorPageProps) {
   };
 
   return (
-    <div className="min-h-screen px-4 py-8">
+    <div className="min-h-screen px-4 py-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <div className="max-w-md mx-auto space-y-8">
         <CreatorHeader profile={profile} />
 
         <div className="space-y-6">
-          <DonationTiers
-            tiers={profile.tiers}
-            onSelectTier={handleTierSelect}
-            qrUrl={profile.promptpayQRUrl}
-          />
+          <div className="animate-in slide-in-from-bottom-2 duration-500 delay-300">
+            <DonationTiers
+              tiers={profile.tiers}
+              onSelectTier={handleTierSelect}
+              qrUrl={profile.promptpayQRUrl}
+            />
+          </div>
 
-          <MessageForm
-            username={profile.username}
-            onSubmit={handleMessageSubmit}
-          />
+          <div className="animate-in slide-in-from-bottom-2 duration-500 delay-500">
+            <MessageForm
+              username={profile.username}
+              onSubmit={handleMessageSubmit}
+            />
+          </div>
 
-          <SupporterFeed items={supporters} />
+          <div className="animate-in slide-in-from-bottom-2 duration-500 delay-700">
+            <SupporterFeed items={supporters} />
+          </div>
         </div>
 
         <QRModal

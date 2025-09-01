@@ -13,12 +13,12 @@ export function Button({
   children,
   ...props
 }: ButtonProps) {
-  const baseClasses = 'rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900';
+  const baseClasses = 'rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 smooth-transform hover:scale-105 active:scale-95';
 
   const variantClasses = {
-    primary: 'bg-[var(--accent)] text-white hover:bg-opacity-90 focus:ring-[var(--accent)]',
+    primary: 'bg-gradient-to-r from-[var(--accent)] to-purple-600 text-white hover:from-purple-600 hover:to-[var(--accent)] focus:ring-[var(--accent)] shadow-lg hover:shadow-xl',
     secondary: 'bg-gray-700 text-white hover:bg-gray-600 focus:ring-gray-500',
-    outline: 'border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white focus:ring-[var(--accent)]'
+    outline: 'border-2 border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white focus:ring-[var(--accent)] hover:shadow-lg'
   };
 
   const sizeClasses = {
